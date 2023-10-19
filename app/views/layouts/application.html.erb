@@ -14,6 +14,9 @@
     <header>
       <% if user_signed_in? %>
         <li>
+          <%= link_to 'Home', books_path %>
+        </li>
+        <li>
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
@@ -25,6 +28,23 @@
         </li>
       <% end %>
     </header>
+
+    <main>
+      <h1>New book</h1>
+
+      <%= form_with model: @book do |f| %>
+
+        <h4>Title</h4>
+        <%= f.text_field :title %>
+
+        <h4>Oinion</h4>
+        <%= f.text_field :body %>
+
+        <%= f.submit 'Create Book' %>
+
+      <% end %>
+
+    </main>
     <%= yield %>
   </body>
 </html>
