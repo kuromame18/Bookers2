@@ -1,0 +1,14 @@
+<h1>User info</h1>
+<%= image_tag @user.get_profile_image(100,100) %>
+<p>name<%= @user.name %></p>
+<p>introduction<%= @user.introduction %></p>
+<% if @user == current_user %>
+  <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+<% end %>
+
+<% @books.each do |book| %>
+<div>
+  <p><%= book.title %></p>
+  <p><%= book.body %></p>
+</div>
+<% end %>
