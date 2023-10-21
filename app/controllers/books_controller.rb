@@ -9,9 +9,11 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
+    @user = current_user
     if @book.save
-      redirect_to books_path(@book.id)
+      redirect_to book_path(@book.id)
     else
+      @books = Book.all
       render :index
     end
   end
