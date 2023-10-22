@@ -1,12 +1,21 @@
 <div>
   <%= flash[:notice] %>
 </div>
-<h1>User info</h1>
-<%= image_tag user.get_profile_image(100,100) %>
-<p>name<%= user.name %></p>
-<p>introduction<%= user.introduction %></p>
-<% if user == current_user %>
-  <%= link_to edit_user_path(user) do %>
-    <i class="fa-solid fa-user-gear"></i>
-  <% end %>
-<% end %>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h1>User info</h1>
+        <%= image_tag user.get_profile_image(100,100) %>
+        <p>name<%= user.name %></p>
+        <p>introduction<%= user.introduction %></p>
+        <% if user == current_user %>
+          <%= link_to edit_user_path(user) do %>
+            <i class="fa-solid fa-user-gear"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>
