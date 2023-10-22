@@ -1,1 +1,20 @@
-<h1>Top</h1>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto">
+        <h1>welcome to <i class="fa-solid fa-book"></i>Bookers!!</h1>
+        <p>in <i class="fa-solid fa-book"></i>Bookers,</p>
+        <p>you can share and exchange your opinions,inpressions,and emotions</p>
+        <p>about various books!</p>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <%= link_to new_user_session_path do %>
+            <button class="btn btn-primary" type="button">Log in</button>
+          <% end %><br
+          <%= link_to new_user_registration_path do %>
+            <button class="btn btn-primary" type="button">Sign out</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
