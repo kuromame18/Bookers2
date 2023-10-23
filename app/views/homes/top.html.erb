@@ -1,3 +1,6 @@
+<div>
+  <%= flash[:notice] %>
+</div>
 <body>
   <div class="container">
     <div class="row">
@@ -7,12 +10,12 @@
         <p>you can share and exchange your opinions,inpressions,and emotions</p>
         <p>about various books!</p>
         <div class="col-6 mx-auto">
-          <%= link_to new_user_session_path do %>
-            <button class="btn btn-primary btn-block" type="button">Log in</button>
-          <% end %><br
-          <%= link_to new_user_registration_path do %>
-            <button class="btn btn-success btn-block" type="button">Sign up</button>
-          <% end %>
+          <%= link_to new_user_session_path, class: "text-white" do %>
+            <button class="btn btn-primary btn-block" type="button">Log in
+          <% end %></button><br>
+          <%= link_to new_user_registration_path,class: "text-white" do %>
+            <button class="btn btn-success btn-block" type="button">Sign up
+          <% end %></button>
         </div>
       </div>
     </div>

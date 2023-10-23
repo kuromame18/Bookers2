@@ -23,7 +23,7 @@
                 <td><%= @book.body %></td>
                 <% if @book.user == current_user %>
                 <td><button class="btn btn-success" type="button">
-                    <%= link_to "edit", edit_book_path(@book), class: "text-white"%></button></td>
+                    <%= link_to "Edit", edit_book_path(@book), class: "text-white"%></button></td>
                 <td><button class="btn btn-danger" type="button">
                     <%= link_to "Destroy", book_path(@book), method: :delete, class: "text-white" %></button></td>
                 <% end %>
