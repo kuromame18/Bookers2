@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @books = @user.books
-    @book = Book.new
+    @book_new = Book.new
   end
 
   def edit
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @book = @user.books
+    @book_new = Book.new
     @user = User.find(params[:id])
     if @user.update(user_params)
       flash[:notice] = "You have updated user successfully."

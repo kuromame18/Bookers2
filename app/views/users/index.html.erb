@@ -1,8 +1,9 @@
-<%= render 'users/user', user: @user %>
-<%= render 'books/book', book: @book %>
-
 <div class="container">
   <div class="row">
+      <div class="col-md-3">
+        <%= render 'users/user', user: @user %>
+        <%= render 'books/book', book: @book %>
+      </div>
     <div class="col-md-8 offset-md-1">
       <h1>Users</h1>
         <table class="table table-striped">
@@ -29,3 +30,4 @@
     </div>
   </div>
 </div>
+
